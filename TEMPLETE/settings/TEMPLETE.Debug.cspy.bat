@@ -25,7 +25,7 @@ if not "%1" == "" goto debugFile
 
 @echo on 
 
-"D:\Program Files\IAR Systems\Embedded Workbench 7.2\common\bin\cspybat" -f "C:\Users\Tina\Desktop\LwIP STM32\TEMPLETE\settings\TEMPLETE.Debug.general.xcl" --backend -f "C:\Users\Tina\Desktop\LwIP STM32\TEMPLETE\settings\TEMPLETE.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\common\bin\cspybat" -f "C:\Users\Jon\Desktop\LwIP-STM32\TEMPLETE\settings\TEMPLETE.Debug.general.xcl" --backend -f "C:\Users\Jon\Desktop\LwIP-STM32\TEMPLETE\settings\TEMPLETE.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Program Files\IAR Systems\Embedded Workbench 7.2\common\bin\cspybat" -f "C:\Users\Tina\Desktop\LwIP STM32\TEMPLETE\settings\TEMPLETE.Debug.general.xcl" "--debug_file=%1" --backend -f "C:\Users\Tina\Desktop\LwIP STM32\TEMPLETE\settings\TEMPLETE.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\common\bin\cspybat" -f "C:\Users\Jon\Desktop\LwIP-STM32\TEMPLETE\settings\TEMPLETE.Debug.general.xcl" "--debug_file=%1" --backend -f "C:\Users\Jon\Desktop\LwIP-STM32\TEMPLETE\settings\TEMPLETE.Debug.driver.xcl" 
 
 @echo off 
 :end

@@ -6,13 +6,37 @@
 
 "-p" 
 
-"D:\Program Files\IAR Systems\Embedded Workbench 7.2\arm\CONFIG\debugger\ST\STM32F103xE.ddf" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\CONFIG\debugger\ST\STM32F103xE.ddf" 
 
 "--semihosting" 
 
 "--device=STM32F103xE" 
 
 "--multicore_nr_of_cores=1" 
+
+"--jet_probe=cmsisdap" 
+
+"--jet_script_file=C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\debugger\ST\STM32.ProbeScript" 
+
+"--jet_standard_reset=9,0,0" 
+
+"--reset_style=\"0,-,0,Disabled__no_reset_\"" 
+
+"--reset_style=\"1,-,0,Software\"" 
+
+"--reset_style=\"2,-,0,Hardware\"" 
+
+"--reset_style=\"3,-,0,Core\"" 
+
+"--reset_style=\"4,-,0,System\"" 
+
+"--reset_style=\"9,ConnectUnderReset,1,Connect_during_reset\"" 
+
+"--drv_interface=SWD" 
+
+"--jet_jtag_speed=4000" 
+
+"--drv_catch_exceptions=0x7f0" 
 
 
 

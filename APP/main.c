@@ -66,8 +66,8 @@ int main(void)
     /* Infinite loop */
     while ( 1 )
     {	
-	/*ÂÖÑ¯*/  
-	LwIP_Periodic_Handle(LocalTime);		          	  
+        /*ÂÖÑ¯*/  
+        LwIP_Periodic_Handle(LocalTime);		          	  
     }
           
     //return 0;

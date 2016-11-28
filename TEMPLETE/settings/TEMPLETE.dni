@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-1919807743
+Checksum=-2024344035
 [CodeCoverage]
 Enabled=_ 0
 [Exceptions]
@@ -27,17 +27,6 @@ Mode=1
 Graph=0
 Symbiont=0
 Exclusions=
-[CallStackLog]
-Enabled=0
-[CallStackStripe]
-ShowTiming=1
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
 [InterruptLog]
 LogEnabled=0
 GraphEnabled=0
@@ -51,10 +40,6 @@ GraphEnabled=0
 ShowTimeLog=1
 SumEnabled=0
 ShowTimeSum=1
-[Disassemble mode]
-mode=0
-[Breakpoints2]
-Count=0
 [Interrupts]
 Enabled=1
 [MemConfig]
@@ -66,9 +51,60 @@ Stop=1
 [Trace1]
 Enabled=0
 ShowSource=1
-[Aliases]
-Count=0
-SuppressDialog=0
 [Simulator]
 Freq=10000000
 MultiCoreRunAll=1
+[Jet]
+JetConnSerialNo=00960
+JetConnFoundProbes=
+DisableInterrupts=0
+MultiCoreRunAll=0
+OnlineReset=Software
+PrevWtdReset=Connect during reset
+[PlDriver]
+MemConfigValue=C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\CONFIG\debugger\ST\STM32F103xE.ddf
+FirstRun=0
+[ArmDriver]
+EnableCache=1
+[SWOManager]
+SamplingDivider=8192
+OverrideClock=0
+CpuClock=3276848
+SwoClock=3276832
+DataLogMode=0
+ItmPortsEnabled=63
+ItmTermIOPorts=1
+ItmLogPorts=0
+ItmLogFile=$PROJ_DIR$\ITM.log
+PowerForcePC=1
+PowerConnectPC=1
+[Trace2]
+Enabled=0
+ShowSource=0
+[SWOTraceWindow]
+ForcedPcSampling=0
+ForcedInterruptLogs=0
+ForcedItmLogs=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[CallStackLog]
+Enabled=0
+[CallStackStripe]
+ShowTiming=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
+[Aliases]
+Count=0
+SuppressDialog=0

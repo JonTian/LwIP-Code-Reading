@@ -51,22 +51,22 @@ void LwIP_Init( void )
    lwip_init();	
 	  
 #if LWIP_DHCP			   					//若使用DHCP协议
-  ipaddr.addr = 0;
-  netmask.addr = 0;
-  gw.addr = 0; 
-#else										//
-  IP4_ADDR(&ipaddr, 192, 168, 1, 18);  		//设置网络接口的ip地址
-  IP4_ADDR(&netmask, 255, 255, 255, 0);		//子网掩码
-  IP4_ADDR(&gw, 192, 168, 1, 1);		//网关
+   ipaddr.addr = 0;
+   netmask.addr = 0;
+   gw.addr = 0; 
+#else
+   IP4_ADDR(&ipaddr, 192, 168, 1, 18);  		//设置网络接口的ip地址
+   IP4_ADDR(&netmask, 255, 255, 255, 0);		//子网掩码
+   IP4_ADDR(&gw, 192, 168, 1, 1);		//网关
 
 #endif
    
-  /*初始化enc28j60与LWIP的接口，参数为网络接口结构体、ip地址、
-  子网掩码、网关、网卡信息指针、初始化函数、输入函数*/
-  netif_add(&enc28j60, &ipaddr, &netmask, &gw, NULL, &ethernetif_init, &ethernet_input);
- 
-  /*把enc28j60设置为默认网卡 .*/
-  netif_set_default(&enc28j60);
+    /*初始化enc28j60与LWIP的接口，参数为网络接口结构体、ip地址、
+    子网掩码、网关、网卡信息指针、初始化函数、输入函数*/
+    netif_add(&enc28j60, &ipaddr, &netmask, &gw, NULL, &ethernetif_init, &ethernet_input);
+
+    /*把enc28j60设置为默认网卡 .*/
+    netif_set_default(&enc28j60);
 
 
 #if LWIP_DHCP	   			//若使用了DHCP
@@ -90,7 +90,7 @@ void LwIP_Init( void )
  */	 
 void Time_Update(void)
 {
-  LocalTime += SYSTEMTICK_PERIOD_MS;
+    LocalTime += SYSTEMTICK_PERIOD_MS;
 }
 
 
@@ -122,28 +122,28 @@ void LwIP_Periodic_Handle(__IO uint32_t localtime)
 	  /* TCP periodic process every 250 ms */
 	  if (localtime - TCPTimer >= TCP_TMR_INTERVAL)
 	  {
-	    TCPTimer =  localtime;
-	    tcp_tmr();		 //每250ms调用一次
+          TCPTimer =  localtime;
+          tcp_tmr();		 //每250ms调用一次
 	  }
 	  /* ARP periodic process every 5s */
 	  if (localtime - ARPTimer >= ARP_TMR_INTERVAL)
 	  {
-	    ARPTimer =  localtime;
-	    etharp_tmr();	  //每5s调用一次
+          ARPTimer =  localtime;
+          etharp_tmr();	  //每5s调用一次
 	  }
 
 #if LWIP_DHCP
 	  /* Fine DHCP periodic process every 500ms */
 	  if (localtime - DHCPfineTimer >= DHCP_FINE_TIMER_MSECS)
 	  {
-	    DHCPfineTimer =  localtime;
-	    dhcp_fine_tmr();
+          DHCPfineTimer =  localtime;
+          dhcp_fine_tmr();
 	  }
 	  /* DHCP Coarse periodic process every 60s */
 	  if (localtime - DHCPcoarseTimer >= DHCP_COARSE_TIMER_MSECS)
 	  {
-	    DHCPcoarseTimer =  localtime;
-	    dhcp_coarse_tmr();
+          DHCPcoarseTimer =  localtime;
+          dhcp_coarse_tmr();
 	  }
 #endif
 

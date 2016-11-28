@@ -74,6 +74,22 @@
 struct netif *netif_list;
 struct netif *netif_default;
 
+#define netif_loopif_init loopif_init
+
+static struct netif loop_ipaddr;
+
+void netif_init(void){
+#if LWIP_HAVA_LOOPIF
+    ip_addr_t loop_ipaddr,loop_netmask,loop_gw;
+    IP4_ADDR(&loop_gw,127,0,0,1);
+    IP4_ADDR(&loop_ipaddr,127,0,0,1);
+    IP4_ADDR(&loop_netmask,255,0,0,0);
+    
+    netif_add(&loop_netif,&loop_ipaddr,&loop_netmask,&loop_gw,NULL,netif_loopif_init,ip_input);
+    netif_set_up(&loop_netif);  //set enable
+#endif
+}
+
 /**
  * Add a network interface to the list of lwIP netifs.
  *

@@ -202,7 +202,11 @@ extern struct netif *netif_list;
 /** The default network interface. */
 extern struct netif *netif_default;
 
-#define netif_init() /* Compatibility define, not init needed. */
+//#if LWIP_HAVA_LOOPIF
+    extern void netif_init(void);
+//#else
+//    #define netif_init() /* Compatibility define, not init needed. */
+//#endif
 
 struct netif *netif_add(struct netif *netif, struct ip_addr *ipaddr, struct ip_addr *netmask,
       struct ip_addr *gw,
